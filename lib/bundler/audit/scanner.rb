@@ -39,7 +39,7 @@ module Bundler
       # @param [String] gemfile_lock
       #   Alternative name for the `Gemfile.lock` file.
       #
-      def initialize(root=Dir.pwd,gemfile_lock='Gemfile.lock')
+      def initialize(root=Dir.pwd,gemfile_lock='gems.locked')
         @root     = File.expand_path(root)
         @database = Database.new
         @lockfile = LockfileParser.new(
